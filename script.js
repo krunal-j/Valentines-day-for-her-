@@ -5,7 +5,7 @@ function selectOption(option) {
     // Check which option was clicked
     if (option === 'yes') {
         // Flash rainbow colors
-        flashRainbowColors(function() {
+        flashRainbowColorswithballons(function() {
             document.getElementById('question').style.display = 'none'; // Hide the question
             displayCatHeart(); // Display the cat-heart.gif
         });
@@ -15,7 +15,7 @@ function selectOption(option) {
         // Increase font size of "Yes" button
         var yesButton = document.getElementById('yes-button');
         var currentFontSize = window.getComputedStyle(yesButton).getPropertyValue('font-size');
-        var newSize = parseFloat(currentFontSize) * 2; // Increase font size by  * 2px
+        var newSize = parseFloat(currentFontSize) * 1.5; // Increase font size by  * 1.5px
         yesButton.style.fontSize = newSize + 'px';
     } else {
         // If neither "Yes" nor "No" was clicked, show an alert message
@@ -24,7 +24,7 @@ function selectOption(option) {
 }
 
 // Function to flash rainbow colors and then execute a callback function
-function flashRainbowColors(callback) {
+function flashRainbowColorswithballons(callback) {
     var colors = ['#ff0000', '#ff7f00', '#ffff00', '#00ff00', '#0000ff', '#4b0082', '#9400d3'];
     var i = 0;
     var interval = setInterval(function() {
